@@ -1,0 +1,8 @@
+import { Exercise } from './exercise.interface';
+
+export interface TrainingCompleted {
+  date: Date,
+  level: number,
+  workout: Exercise[],
+  workoutDuration: number
+}

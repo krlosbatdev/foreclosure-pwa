@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-realstatescrapperweb-dev-15520-authRole",
+            "UnauthRoleArn": "arn:aws:iam::124744339772:role/amplify-realstatescrapperweb-dev-15520-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::124744339772:role/amplify-realstatescrapperweb-dev-15520-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-realstatescrapperweb-dev-15520-deployment",
+            "UnauthRoleName": "amplify-realstatescrapperweb-dev-15520-unauthRole",
+            "StackName": "amplify-realstatescrapperweb-dev-15520",
+            "StackId": "arn:aws:cloudformation:us-east-1:124744339772:stack/amplify-realstatescrapperweb-dev-15520/f2bf9530-bdba-11ea-a119-0a35f6ddac11",
+            "AmplifyAppId": "d2rymvldy3i5sg"
+        },
+        "categories": {
+            "auth": {
+                "realstatescrapperweb513eec99": {}
+            }
+        }
+    }
+}

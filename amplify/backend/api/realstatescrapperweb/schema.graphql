@@ -1,0 +1,5 @@
+type Scrap @model {
+  id: String!
+  fl_forclosures: String
+  md_forclosures: String
+}
