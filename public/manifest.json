@@ -3,19 +3,19 @@
   "name": "Foreclosure PWA",
   "icons": [
     {
-      "src": "build.ico",
+      "src": "house96.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "buildlogo192.png",
+      "src": "house96.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "96x96"
     },
     {
-      "src": "buildlogo500.png",
+      "src": "house96.png.png",
       "type": "image/png",
-      "sizes": "500x500"
+      "sizes": "96x96"
     }
   ],
   "start_url": ".",
