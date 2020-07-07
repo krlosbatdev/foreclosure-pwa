@@ -3,6 +3,9 @@
   --theme: #356ce2;
   --bg-grey: #f5f5f5;
   --border: #e0e0e0;
+  --amplify-primary-color: #356ce2;
+  --amplify-primary-tint: #ff9900;
+  --amplify-primary-shade:#356ce2;
 }
 
 /* layout styles */
