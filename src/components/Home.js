@@ -1,21 +1,18 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 import { listScraps } from '../graphql/queries';
 import { API, graphqlOperation } from 'aws-amplify';
 
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
+function Home(props) {
 
-    this.state = {
-      scraps: []
-    }
-  }
+  const [items, setItems] = useState([])
 
-  async componentDidMount() {
+  const getScraps = async () => {
+
     const scraps = await API.graphql(graphqlOperation(listScraps));
+
     let scrapList = scraps.data.listScraps["items"].map(i => {
       return {
         date: i.id.substr(0, i.id.indexOf(',')),
@@ -23,19 +20,22 @@ class Home extends React.Component {
         florida: i.fl_forclosures
 
       }
-    })
-    this.setState({ scraps: scrapList })
-
-    //
+    });
+    setItems(scrapList)
   }
+  useEffect(() =>  {
+    getScraps();
+  }, [])
 
 
-  render() {
     return (
+      <div>
+      {items.length ?
+
       <LineChart
         width={350}
         height={300}
-        data={this.state.scraps}
+        data={items}
         margin={{
           top: 30, right: 30, left: 20, bottom: 5,
         }}
@@ -49,8 +49,11 @@ class Home extends React.Component {
         <Line type="monotone" dataKey="miamidade" stroke="#82ca9d" />
       </LineChart>
 
+
+      : <span>Loading ...</span>
+    }
+      </div>
     )
-  };
 }
 
 export default Home;
