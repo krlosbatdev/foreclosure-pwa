@@ -1,5 +1,10 @@
-type Scrap @model {
-  id: String!
+type Scrap @model
+@key(
+  name:"byDate"
+  fields:["id",""]
+) {
+  id: ID!
+  date:
   fl_forclosures: String
   md_forclosures: String
 }

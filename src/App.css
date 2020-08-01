@@ -7,7 +7,9 @@
   --amplify-primary-tint: #ff9900;
   --amplify-primary-shade:#356ce2;
 }
-
+amplify-authenticator{
+  text-align: center;
+}
 /* layout styles */
 nav {
   background: var(--theme);
